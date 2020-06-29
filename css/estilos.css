@@ -1,0 +1,181 @@
+
+/*
+---
+Linkedin: https://www.linkedin.com/in/denercarvalho/
+Github: https://github.com/DEADRamp
+---
+Cores Padrões do Projeto
+Detalhes:       #D2872C
+Cor da Fonte:   #766F68 
+*/
+/*@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");*/
+@font-face{
+    font-family: 'Roboto';
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* ---> Aqui Inicia as Config do Menu UL*/
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+.menu ul li{
+    float: left;
+    width: 90px;    
+}
+.menu a{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #766F68;
+}
+.menu ul li a:hover{
+    color: #D2872C;
+    transition: .30s;
+    border-bottom: solid 1px #D2872C;
+}
+/* ---> Aqui Inicia as Config da Nav*/
+.menu-topo{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em 2.5em;
+}
+/* ---> Aqui Inicia as Config da Logo*/
+.text-logo{
+    color: #D2872C;
+    font-size: 1.3em;
+}
+/* ---> Aqui Inicia as Config do menu dropdown*/
+.bt_menu{
+    display: none;
+    cursor: pointer;
+}
+#bt_menu_ch{
+    display: none;
+}
+.menu-tr{
+    width: 30px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #333;
+    margin: 2px 0px;
+}
+/* ---> Aqui Inicia as Config da main*/
+main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+.bg-home{
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 65%;
+    height: 100%;
+    background: url("../assets/team.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+}
+/* ---> Aqui Inicia as Config do titulo e subtitulo*/
+.titulo{
+    color: #766F68;
+    font-size: 3.2em; 
+    font-weight: bold;
+    display: block;
+    width: 400px;
+}
+.subtitulo{
+    color: #766F68;
+    font-size: 1.2em; 
+    padding-top: 30px;
+    display: block;
+    width: 300px;
+}
+/* ---> Aqui Inicia as Config do botao*/
+.bt_start{
+    width: 200px;
+    height: 55px;
+    background-color: #D2872C;
+    color: #fff;
+    border: transparent;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 45px;
+    cursor: pointer;
+}
+/* ---> Aqui inicia as Config de responsividade  Screen < 900px  */
+@media screen and (max-width: 900px){
+    .bg-home{
+        right: 1%;
+        height: 100%;
+    }
+    main{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .bt_menu{
+        display: block;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+        background-color: #fff;
+        border-bottom: #766F68 solid 1px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        margin-top: -100%;
+        transition: .4s;
+        z-index: -1;
+    }
+    #bt_menu_ch:checked ~ .menu{
+        margin-top: 0;
+        z-index: 1;
+    }
+}
+/* ---> Aqui inicia as Config de responsividade  Screen < 500px  */
+@media screen and (max-width: 500px){
+    main{
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 40px;
+    }
+    .bg-home{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        z-index: 0;
+    }
+    .titulo{
+        font-size: 2.5em; 
+        text-align: center;
+        width: 100%;
+    }
+    .subtitulo{
+        font-size: 1.2em; 
+        padding-top: 25px;
+        text-align: center;
+        width: 100%;
+    }
+    .bt_start{
+        display: block;
+        width: 200px;
+        height: 55px;
+        margin: 30px auto;
+    }
+}
